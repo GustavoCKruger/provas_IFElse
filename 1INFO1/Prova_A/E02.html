@@ -11,11 +11,47 @@
     */
     
     //Entrada
-
-
+    const salario = Number(prompt("Informe o seu salário líquido:").trim().replace(".",","));
+    const auxilio = prompt("Deseja receber auxilio transporte? Responda com S-sim e N-não.").trim().toUpperCase();
+    let resposta;
+    let resultado;
     //Processamento
-
+    if(auxilio == "N"){
+    if(salario < 2000){
+        resposta = ` Não há desconto.`
+    }
+    else if(salario >= 2000 && salario < 3500){
+        resultado = salario * 0.1;
+        resposta = ` O salario é de R$${salario - resultado} e foi descontado R$` + resultado ;
+    }
+    else if(salario >= 3500 && salario < 6000){
+        resultado = salario * 0.2;
+        resposta = ` O salario é de R$${salario - resultado} e foi descontado R$` + resultado ;
+    }
+    else if(salario >= 6000){
+        resultado = salario * 0.3;
+        resposta = ` O salario é de R$${salario - resultado} e foi descontado R$` + resultado ;
+    }
+    }
+    if(auxilio == "S"){
+    if(salario < 2000){
+        resposta = ` Teve desconto por causa do auxilo de R$` + salario * 0.6;
+    }
+    else if(salario >= 2000 && salario < 3500){
+        resultado = salario * 0.16;
+        resposta = ` O salario é de R$${salario - resultado} e foi descontado R$` + resultado ;
+    }
+    else if(salario >= 3500 && salario < 6000){
+        resultado = salario * 0.26;
+        resposta = ` O salario é de R$${salario - resultado} e foi descontado R$` + resultado ;
+    }
+    else if(salario >= 6000){
+        resultado = salario * 0.36;
+        resposta = ` O salario é de R$${salario - resultado} e foi descontado R$` + resultado ;
+    }
+    }
 
     //Saída
+    alert(resposta)
 
 </script>

@@ -6,11 +6,51 @@
     */
     
     //Entrada
-
+    const votaçãoAluno1 = Number(prompt("Precisa eleger um líder. Digite 1 para João e 2 para Maria:"));
+    const votaçãoAluno2 = Number(prompt("Precisa eleger um líder. Digite 1 para João e 2 para Maria:"));
+    const votaçãoAluno3 = Number(prompt("Precisa eleger um líder. Digite 1 para João e 2 para Maria:"));
+    const votaçãoAluno4 = Number(prompt("Precisa eleger um líder. Digite 1 para João e 2 para Maria:"));
+    const votaçãoAluno5 = Number(prompt("Precisa eleger um líder. Digite 1 para João e 2 para Maria:"));
+    let votosJoão = 0;
+    let votosMaria = 0;
 
     //Processamento
-
+    if(votaçãoAluno1 == 1){
+        votosJoão++;
+    }
+    if(votaçãoAluno1 == 2){
+        votosMaria++;
+    }
+    if(votaçãoAluno2 == 1){
+        votosJoão++;
+    }
+     if(votaçãoAluno2 == 2){
+        votosMaria++;
+    }
+    if(votaçãoAluno3 == 1){
+        votosJoão++;
+    }
+    if(votaçãoAluno3 == 2){
+        votosMaria++;
+    }
+    if(votaçãoAluno4 == 1){
+        votosJoão++;
+    }
+    if(votaçãoAluno4 == 2){
+        votosMaria++;
+    }
+    if(votaçãoAluno5 == 1){
+        votosJoão++;
+    }
+    if(votaçãoAluno5 == 2){
+        votosMaria++;
+    }
 
     //Saída
-
+    if(votosJoão > votosMaria){
+        alert(`João venceu com ${votosJoão} votos.`);
+    }
+    if(votosMaria > votosJoão){
+        alert(`Maria venceu com ${votosMaria} votos.`);
+    }
 </script>
